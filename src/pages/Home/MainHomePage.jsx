@@ -1,16 +1,18 @@
 import React from 'react';
-import Banner from '../../components/ui/HomeBanner/Banner';
 import InfoHome from './InfoHome';
 import { Container } from '../../components/ui/reUsable/Container';
+import Banner from '../../components/ui/Home/Banner';
+import FeaturesProduct from './FeaturesProduct';
 
 const MainHomePage = () => {
     return (
         <div className='font-poppins'>
             <Banner />
             <Container>'
-
-            <InfoHome />
+                <InfoHome />
+                <FeaturesProduct />
             </Container>
+
         </div>
     );
 };
