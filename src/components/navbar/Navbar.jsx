@@ -32,7 +32,7 @@ const MainHeader = () => {
         <div className='text-2xl font-semibold text-gray-900 tracking-wide'>
           <div className='flex gap-2 items-center'>
             <img className='h-[32px] w-32[px]' src={logo} alt="" />
-            <h className="text-[32px]">Ecobazar</h>
+            <h1 className="text-[32px]">Ecobazar</h1>
           </div>
         </div>
 
