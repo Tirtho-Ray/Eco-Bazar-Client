@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="text-[#999999]">
-            <h3 className="text-white text-[16px]">My Account</h3>
+            <h3 className="text-white text-[16px] font-[450]">My Account</h3>
             <ul className="flex flex-col gap-3 whitespace-nowrap mt-2 text-[14px]">
               <a href="#">My Account</a>
               <a href="#">Order History</a>
@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="text-[#999999]">
-            <h3 className="text-white text-[16px]">Helps</h3>
+            <h3 className="text-white text-[16px] font-[450]">Helps</h3>
             <ul className="flex flex-col gap-3 whitespace-nowrap mt-2 text-[14px]">
               <a href="#">Contacts</a>
               <a href="#">Faqs</a>
@@ -45,7 +45,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="text-[#999999]">
-            <h3 className="text-white text-[16px]">Proxy</h3>
+            <h3 className="text-white text-[16px] font-[450]">Proxy</h3>
             <ul className="flex flex-col gap-3 whitespace-nowrap mt-2 text-[14px]">
               <a href="#">About</a>
               <a href="#">Shop</a>
@@ -54,7 +54,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="text-[#999999]">
-            <h3 className="text-white text-[16px]">Categories</h3>
+            <h3 className="text-white text-[16px] font-[450]">Categories</h3>
             <ul className="flex flex-col gap-3 whitespace-nowrap mt-2 text-[14px]">
               <a href="#">Fruit & Vegetables</a>
               <a href="#">Meat & Fish</a>
