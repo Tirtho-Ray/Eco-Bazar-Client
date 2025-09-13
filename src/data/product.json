@@ -18,8 +18,9 @@
       "organic": true,
       "nutrition": "100 g of fresh leaves provides 20% of daily Vitamin C."
     },
+     "rating": 3.5,
     "images": [
-      "https://example.com/images/product-image-1.jpg",
+      "/src/assets/Best_Product_sell/Image (12).png",
       "https://example.com/images/product-image-2.jpg"
     ]
   },
@@ -42,8 +43,9 @@
         "organic": true, 
         "nutrition": "1 apple provides 15% of daily fiber." 
       }, 
+       "rating": 3.5,
       "images": [ 
-        "https://example.com/images/fresh-apples-1.jpg", 
+         "/src/assets/Best_Product_sell/Image (13).png",
         "https://example.com/images/fresh-apples-2.jpg" 
       ] 
     }, 
@@ -66,8 +68,9 @@
         "organic": false, 
         "nutrition": "Rich in omega-3 fatty acids and protein." 
       }, 
+       "rating": 3.5,
       "images": [ 
-        "https://example.com/images/salmon-fillet-1.jpg", 
+          "/src/assets/Best_Product_sell/Image (14).png",
         "https://example.com/images/salmon-fillet-2.jpg" 
       ] 
     }, 
@@ -90,8 +93,9 @@
         "organic": false, 
         "nutrition": "High in protein and iron." 
       }, 
+       "rating": 3.5,
       "images": [ 
-        "https://example.com/images/beef-steak-1.jpg", 
+           "/src/assets/Best_Product_sell/Image (15).png", 
         "https://example.com/images/beef-steak-2.jpg" 
       ] 
     }, 
@@ -114,6 +118,7 @@
         "organic": true, 
         "nutrition": "Contains essential minerals for hydration." 
       }, 
+       "rating": 3.5,
       "images": [ 
         "https://example.com/images/spring-water-1.jpg", 
         "https://example.com/images/spring-water-2.jpg" 
@@ -138,6 +143,7 @@
         "organic": false, 
         "nutrition": "Contains 10g of protein per serving." 
       }, 
+       "rating": 3.5,
       "images": [ 
         "https://example.com/images/chips-snacks-1.jpg", 
         "https://example.com/images/chips-snacks-2.jpg" 
@@ -162,6 +168,7 @@
         "organic": true, 
         "nutrition": "Rich in vitamin A and fiber." 
       }, 
+       "rating": 3.5,
       "images": [ 
         "https://example.com/images/carrot-sticks-1.jpg", 
         "https://example.com/images/carrot-sticks-2.jpg" 
@@ -186,6 +193,7 @@
         "organic": false, 
         "nutrition": "Contains 100% vitamin C, no added sugar." 
       }, 
+       "rating": 3.5,
       "images": [ 
         "https://example.com/images/orange-juice-1.jpg", 
         "https://example.com/images/orange-juice-2.jpg" 
@@ -210,6 +218,7 @@
         "organic": true, 
         "nutrition": "High in protein, low in fat." 
       }, 
+       "rating": 3.5,
       "images": [ 
         "https://example.com/images/chicken-breasts-1.jpg", 
         "https://example.com/images/chicken-breasts-2.jpg" 
