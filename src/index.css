@@ -7,3 +7,17 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
 }
+
+@utility small-text {
+  @apply text-[14px] font-poppins;
+}
+@utility mid-text {
+  @apply text-[16px] font-poppins;
+}
+@utility big-text {
+  @apply text-[20px] font-poppins;
+}
+
+body {
+  font-family: var(--font-poppins);
+}

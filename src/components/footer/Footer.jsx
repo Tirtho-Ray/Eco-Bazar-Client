@@ -3,6 +3,7 @@ import { Container } from "../ui/reUsable/Container";
 import logo from "../../assets/logo/plant.png";
 
 const Footer = () => {
+
   return (
     <div className="mt-40 bg-[#1A1A1A] font-poppins font-[400]">
       <Container>
@@ -62,15 +63,6 @@ const Footer = () => {
               <a className="text-white" href="#">Beauty & Health</a>
             </ul>
           </div>
-         
-        </div>
-        <div className="flex justify-between py-3 text-[13px] border-t border-t-[#333333] text-[#808080]">
-            <p>Ecobazar eCommerce © 2025. All Rights Reserved</p>
-            <a href="https://github.com/Tirtho-Ray" target="_blank">@TirthoDev</a>
-         </div>
-      </Container>
-    </div>
-  );
 };
 
 export default Footer;
