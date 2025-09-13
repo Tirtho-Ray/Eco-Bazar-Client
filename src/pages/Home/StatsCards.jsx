@@ -18,11 +18,11 @@ const StatsCards = () => {
       }}
     >
       <Container>
-        <div className="flex flex-wrap justify-between gap-6 ">
+        <div className="flex flex-wrap justify-between gap-6">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="h-[174px] w-[312px] bg-white/5 backdrop-blur-md border border-white/20 rounded-xl shadow-lg flex flex-col items-center justify-center "
+              className="h-[174px] w-[312px] bg-white/5 backdrop-blur-md border border-white/20 rounded-xl shadow-lg flex flex-col items-center justify-center"
             >
               <span className="text-green-400 text-4xl font-semibold">
                 {stat.value}
