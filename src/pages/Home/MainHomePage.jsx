@@ -3,6 +3,8 @@ import InfoHome from './InfoHome';
 import { Container } from '../../components/ui/reUsable/Container';
 import Banner from '../../components/ui/Home/Banner';
 import FeaturesProduct from './FeaturesProduct';
+import TrustBlog from './TrustBlog';
+import StatsCards from './StatsCards';
 
 const MainHomePage = () => {
     return (
@@ -12,6 +14,8 @@ const MainHomePage = () => {
                 <InfoHome />
                 <FeaturesProduct />
             </Container>
+                <TrustBlog />
+                <StatsCards />
 
         </div>
     );
