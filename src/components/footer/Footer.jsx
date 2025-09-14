@@ -3,7 +3,6 @@ import { Container } from "../ui/reUsable/Container";
 import logo from "../../assets/logo/plant.png";
 
 const Footer = () => {
-
   return (
     <div className="mt-40 bg-[#1A1A1A] font-poppins font-[400]">
       <Container>
@@ -14,8 +13,8 @@ const Footer = () => {
               <h3 className="text-[32px]">Ecobazar</h3>
             </div>
             <p className="text-[#808080] mt-4">
-              Morbi cursus porttitor enim lobortis molestie. Duis gravida <br/> turpis
-              dui, eget bibendum magna <br/> congue nec.
+              Morbi cursus porttitor enim lobortis molestie. Duis gravida <br />{" "}
+              turpis dui, eget bibendum magna <br /> congue nec.
             </p>
             <div className="text-[#808080] flex mt-4">
               <a href="#" className="text-white">
@@ -32,7 +31,9 @@ const Footer = () => {
             <ul className="flex flex-col gap-3 whitespace-nowrap mt-2 text-[14px]">
               <a href="#">My Account</a>
               <a href="#">Order History</a>
-              <a className="text-white" href="#">Shopping Cart</a>
+              <a className="text-white" href="#">
+                Shopping Cart
+              </a>
               <a href="#">Wishlist</a>
             </ul>
           </div>
@@ -41,7 +42,9 @@ const Footer = () => {
             <ul className="flex flex-col gap-3 whitespace-nowrap mt-2 text-[14px]">
               <a href="#">Contacts</a>
               <a href="#">Faqs</a>
-              <a className="text-white" href="#">Terms & Conditions</a>
+              <a className="text-white" href="#">
+                Terms & Conditions
+              </a>
               <a href="#">Privacy Policy</a>
             </ul>
           </div>
@@ -51,7 +54,9 @@ const Footer = () => {
               <a href="#">About</a>
               <a href="#">Shop</a>
               <a href="#">Product</a>
-              <a className="text-white" href="#">Track Order</a>
+              <a className="text-white" href="#">
+                Track Order
+              </a>
             </ul>
           </div>
           <div className="text-[#999999]">
@@ -60,9 +65,15 @@ const Footer = () => {
               <a href="#">Fruit & Vegetables</a>
               <a href="#">Meat & Fish</a>
               <a href="#">Bread & Bakery</a>
-              <a className="text-white" href="#">Beauty & Health</a>
+              <a className="text-white" href="#">
+                Beauty & Health
+              </a>
             </ul>
           </div>
+        </div>
+      </Container>
+    </div>
+  );
 };
 
 export default Footer;

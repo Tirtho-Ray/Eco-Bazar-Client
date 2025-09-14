@@ -21,7 +21,7 @@
      "rating": 3.5,
     "images": [
       "/src/assets/Best_Product_sell/Image (12).png",
-      "https://example.com/images/product-image-2.jpg"
+      "/src/assets/Best_Product_sell/Image (12).png"
     ]
   },
     { 
@@ -46,7 +46,7 @@
        "rating": 3.5,
       "images": [ 
          "/src/assets/Best_Product_sell/Image (13).png",
-        "https://example.com/images/fresh-apples-2.jpg" 
+       "/src/assets/Best_Product_sell/Image (12).png"
       ] 
     }, 
     { 
@@ -71,7 +71,7 @@
        "rating": 3.5,
       "images": [ 
           "/src/assets/Best_Product_sell/Image (14).png",
-        "https://example.com/images/salmon-fillet-2.jpg" 
+          "/src/assets/Best_Product_sell/Image (12).png"
       ] 
     }, 
     { 
@@ -96,7 +96,7 @@
        "rating": 3.5,
       "images": [ 
            "/src/assets/Best_Product_sell/Image (15).png", 
-        "https://example.com/images/beef-steak-2.jpg" 
+        "/src/assets/Best_Product_sell/Image (12).png"
       ] 
     }, 
     { 
@@ -119,9 +119,9 @@
         "nutrition": "Contains essential minerals for hydration." 
       }, 
        "rating": 3.5,
-      "images": [ 
-        "https://example.com/images/spring-water-1.jpg", 
-        "https://example.com/images/spring-water-2.jpg" 
+       "images": [ 
+           "/src/assets/Best_Product_sell/Image (15).png", 
+          "/src/assets/Best_Product_sell/Image (12).png"
       ] 
     }, 
     { 
@@ -145,9 +145,9 @@
       }, 
        "rating": 3.5,
       "images": [ 
-        "https://example.com/images/chips-snacks-1.jpg", 
-        "https://example.com/images/chips-snacks-2.jpg" 
-      ] 
+           "/src/assets/Best_Product_sell/Image (15).png", 
+           "/src/assets/Best_Product_sell/Image (12).png" 
+      ]  
     }, 
     { 
       "id": "251600", 
@@ -169,9 +169,9 @@
         "nutrition": "Rich in vitamin A and fiber." 
       }, 
        "rating": 3.5,
-      "images": [ 
-        "https://example.com/images/carrot-sticks-1.jpg", 
-        "https://example.com/images/carrot-sticks-2.jpg" 
+       "images": [ 
+           "/src/assets/Best_Product_sell/Image (15).png", 
+          "/src/assets/Best_Product_sell/Image (12).png"
       ] 
     }, 
     { 
@@ -195,8 +195,8 @@
       }, 
        "rating": 3.5,
       "images": [ 
-        "https://example.com/images/orange-juice-1.jpg", 
-        "https://example.com/images/orange-juice-2.jpg" 
+           "/src/assets/Best_Product_sell/Image (15).png", 
+          "/src/assets/Best_Product_sell/Image (12).png"
       ] 
     }, 
     { 
@@ -219,9 +219,9 @@
         "nutrition": "High in protein, low in fat." 
       }, 
        "rating": 3.5,
-      "images": [ 
-        "https://example.com/images/chicken-breasts-1.jpg", 
-        "https://example.com/images/chicken-breasts-2.jpg" 
+       "images": [ 
+           "/src/assets/Best_Product_sell/Image (15).png", 
+        "/src/assets/Best_Product_sell/Image (12).png"
       ] 
     } 
 ] 
