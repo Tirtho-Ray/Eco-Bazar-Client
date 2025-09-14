@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from "react";
-import {
-  MdOutlineKeyboardArrowDown,
-  MdKeyboardArrowUp,
-} from "react-icons/md";
+import { MdOutlineKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { useProduct } from "./../../hooks/product/useProduct";
 import ProductCard from "../../components/ui/reUsable/ProductCard";
 import { FaSlidersH } from "react-icons/fa";
+import { useNavigate } from "react-router";
+import { useWishlist } from "../../hooks/saveProduct/useWishlist";
+import toast from "react-hot-toast";
 
 // Dummy Popular Tags
 const tags = [
@@ -38,7 +38,7 @@ const ShopProduct = () => {
   const [priceRange, setPriceRange] = useState([0, 150]);
   const [minRating, setMinRating] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
-
+  const navigate = useNavigate();
   // Sort
   const [sortBy, setSortBy] = useState("latest");
 
@@ -48,6 +48,8 @@ const ShopProduct = () => {
 
   // Load products
   const { data: products, isError, isLoading } = useProduct();
+  // eslint-disable-next-line no-unused-vars
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 
   // Category Map
   const categoryMap = {};
@@ -66,7 +68,7 @@ const ShopProduct = () => {
     }));
   };
 
-  // Filter + Sort + Pagination (useMemo for performance)
+  // Filter + Sort + Pagination
   const filteredProducts = useMemo(() => {
     if (!products) return [];
 
@@ -81,8 +83,7 @@ const ShopProduct = () => {
           : p.category === selectedCategory;
 
       const byPrice =
-        discountedPrice >= priceRange[0] &&
-        discountedPrice <= priceRange[1];
+        discountedPrice >= priceRange[0] && discountedPrice <= priceRange[1];
 
       const byRating = p.rating ? p.rating >= minRating : true;
 
@@ -148,7 +149,7 @@ const ShopProduct = () => {
                 value={sortBy}
                 onChange={(e) => {
                   setSortBy(e.target.value);
-                  setCurrentPage(1); // reset page
+                  setCurrentPage(1);
                 }}
               >
                 <option value="latest">Latest</option>
@@ -185,9 +186,7 @@ const ShopProduct = () => {
               <ul className="mt-4 space-y-2">
                 <li
                   className={`flex items-center gap-2 cursor-pointer ${
-                    selectedCategory === "all"
-                      ? "font-bold text-green-600"
-                      : ""
+                    selectedCategory === "all" ? "font-bold text-green-600" : ""
                   }`}
                   onClick={() => {
                     setSelectedCategory("all");
@@ -219,9 +218,7 @@ const ShopProduct = () => {
                         <div className="h-[10px] w-[10px] bg-green-600 rounded-full" />
                       )}
                     </div>
-                    <span className="text-[15px] capitalize">
-                      {category}
-                    </span>
+                    <span className="text-[15px] capitalize">{category}</span>
                     <span className="text-gray-500">({count})</span>
                   </li>
                 ))}
@@ -361,26 +358,37 @@ const ShopProduct = () => {
             <p className="text-center text-gray-500">No products found</p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-              {currentProducts?.map((item) => (
-                <ProductCard
-                  key={item.id}
-                  id={item.id}
-                  name={item.name}
-                  price={parseFloat(
-                    item.price.discounted_price.replace("$", "")
-                  )}
-                  oldPrice={parseFloat(
-                    item.price.original_price.replace("$", "")
-                  )}
-                  discount={item.price.discount_percentage}
-                  image={item.images[0]}
-                  isAvailable={item.availability === "In Stock"}
-                  rating={item.rating ?? 4}
-                  onAddToCart={(id) => alert(`Added ${id} to cart`)}
-                  onWishlist={(id) => alert(`Wishlist ${id}`)}
-                  onQuickView={(id) => alert(`Quick View ${id}`)}
-                />
-              ))}
+              {currentProducts?.map((item) => {
+                const wishlisted = isInWishlist(item.id);
+                return (
+                  <ProductCard
+                    key={item.id}
+                    id={item.id}
+                    name={item.name}
+                    price={parseFloat(
+                      item.price.discounted_price.replace("$", "")
+                    )}
+                    oldPrice={parseFloat(
+                      item.price.original_price.replace("$", "")
+                    )}
+                    discount={item.price.discount_percentage}
+                    image={item.images[0]}
+                    isAvailable={item.availability === "In Stock"}
+                    rating={item.rating ?? 4}
+                    onAddToCart={(id) => alert(`Added ${id} to cart`)}
+                    onQuickView={(id) => navigate(`/shop/${id}`)}
+                    onWishlist={() => {
+                      if (wishlisted) {
+                        toast.error(`${item.name} is already in your wishlist`);
+                        return;
+                      }
+                      addToWishlist(item);
+                      toast.success(`${item.name} added to wishlist`);
+                    }}
+                    isWishlisted={wishlisted}
+                  />
+                );
+              })}
             </div>
           )}
 
