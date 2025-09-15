@@ -6,6 +6,7 @@ import FeaturesProduct from "./FeaturesProduct";
 import TrustBlog from "./TrustBlog";
 import StatsCards from "./StatsCards";
 import Category from "./category";
+import OfferAndSell from "./OfferAndSell";
 
 const MainHomePage = () => {
   return (
@@ -15,12 +16,14 @@ const MainHomePage = () => {
         <InfoHome />
         <FeaturesProduct />
       </Container>
-       <Container>
+      <Container>
         <Category />
       </Container>
       <TrustBlog />
       <StatsCards />
-     
+      <Container>
+        <OfferAndSell />
+      </Container>
     </div>
   );
 };
