@@ -1,22 +1,26 @@
 import { MoveRight } from "lucide-react";
-import { useProduct } from './../../hooks/product/useProduct';
+import { useProduct } from "./../../hooks/product/useProduct";
 import ProductCard from "../../components/ui/reUsable/ProductCard";
 import { useWishlist } from "../../hooks/saveProduct/useWishlist";
-import toast from "react-hot-toast"; 
+import toast from "react-hot-toast";
 
-const FeaturesProduct = () => {
+const BestSellProduct = () => {
   const { data: products, isLoading, isError } = useProduct();
   // eslint-disable-next-line no-unused-vars
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 
-  if (isLoading) return <p className="text-center mt-10">Loading products...</p>;
-  if (isError) return <p className="text-center mt-10 text-red-500">Failed to load products</p>;
+  if (isLoading)
+    return <p className="text-center mt-10">Loading products...</p>;
+  if (isError)
+    return (
+      <p className="text-center mt-10 text-red-500">Failed to load products</p>
+    );
 
   return (
-    <div className="mt-20">
+    <div className="mt-32">
       {/* Section Header */}
       <div className="flex justify-between items-center mb-8 ">
-        <h1 className="text-[40px] font-bold">Featured Products</h1>
+        <h1 className="text-[40px] font-bold">Best sell products</h1>
         <div className="flex items-center gap-2 hover:text-green-600 text-[16px] font-semibold cursor-pointer hover:mr-2 transition-all">
           <p>View all</p>
           <MoveRight />
@@ -26,7 +30,7 @@ const FeaturesProduct = () => {
       {/* Show Product */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
         {products?.slice(0, 4).map((item) => {
-          const wishlisted = isInWishlist(item.id); 
+          const wishlisted = isInWishlist(item.id);
 
           return (
             <ProductCard
@@ -54,8 +58,9 @@ const FeaturesProduct = () => {
           );
         })}
       </div>
+      {/* //here render */}
     </div>
   );
 };
 
-export default FeaturesProduct;
+export default BestSellProduct;
