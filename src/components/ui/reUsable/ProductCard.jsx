@@ -81,7 +81,7 @@ const ProductCard = ({
         <button
           onClick={() => onAddToCart?.(id)}
           disabled={!isAvailable}
-          className={`p-3 rounded-full transition-colors duration-300 ${
+          className={`p-3 rounded-full transition-colors duration-200 ${
             isAvailable
               ? "bg-gray-200 group-hover:bg-green-500 group-hover:text-white text-gray-700"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
