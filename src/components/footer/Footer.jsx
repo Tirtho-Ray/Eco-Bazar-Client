@@ -4,7 +4,7 @@ import logo from "../../assets/logo/plant.png";
 
 const Footer = () => {
   return (
-    <div className="mt-40 bg-[#1A1A1A] font-poppins font-[400]">
+    <div className="mt-10 bg-[#1A1A1A] font-poppins font-[400]">
       <Container>
         <div className="h-[344px] w-full bg-transparent flex justify-around items-center gap-x-20">
           <div className="text-white">
